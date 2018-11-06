@@ -12,6 +12,11 @@ import com.jph.takephoto.model.TResult
 import kotlinx.android.synthetic.main.instance_activity_take_photo.*
 import java.io.File
 
+/**
+Date: 2018/10/29
+Time: 09:16
+author: duhaitao
+ */
  class TakePhotoActivity : TakePhotoActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +37,11 @@ import java.io.File
         }
     }
 
+    /**
+     * 压缩配置
+     * setMaxSize 压缩大小
+     * setMaxPixel 压缩长宽
+     * */
     private fun configCompress() {
         var compressConfig = CompressConfig.Builder().setMaxSize(100*1024).setMaxPixel(1200).enableReserveRaw(false).create()
         takePhoto.onEnableCompress(compressConfig,false)
