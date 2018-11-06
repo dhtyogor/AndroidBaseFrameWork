@@ -109,13 +109,10 @@ public class TUriParse {
         }
         String path;
         if (TextUtils.equals(uri.getAuthority(), TConstant.getFileProviderName(context))) {
-            Log.e("xxx","aaaaaa");
             path = new File(uri.getPath().replace("camera_photos/", "")).getAbsolutePath();
         } else {
-            Log.e("xxx","bbbb");
             path = uri.getPath();
         }
-        Log.e("xxx","======"+path);
         return path;
     }
 
