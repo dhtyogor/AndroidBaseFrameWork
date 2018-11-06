@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    1.utils
+             此包中包含：公共工具方法类，比如：SPHelperUtil、TimeUitl、FileUtil等
+
+    2.adapter
+             此包中包含：一些适配器的类，比如：ArticleAdapter、FansAdapter，HistorAdaper等
+
+    3.base
+             此包中包含：一些共同类的基类，比如：BaseActivity（所有的Activity类都继承这个类）、BaseFragment（所有的Fragment都继承这个类），ListItemAdapter（封装了Base Adapter的基类）等
+
+    4.bean
+             此包中包含：一些属性对象类，比如：StudentBean、LonginBean、ArticleBean等
+
+    5.config
+             此包中包含：最顶级的配置类，比如：MyApp（继承了Application）
+
+    10.weight
+             此包中包含：自定义View或自定义对话框等视图类。如：CursroDialog类，SpringScrollView类，ScrollListView类等
+
+    11.db
+             此包中包含：数据库操作类
+
+    12.service
+             此包中包含：Service服务类
+
+    13.broadcast
+             此包中包含：Broadcast广播接收者类
+
+    14.provider
+             此包中包含：Provider内容提供者类（用得很少）
+
+</resources>

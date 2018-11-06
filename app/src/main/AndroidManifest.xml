@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dohia.androidbaseframework"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".config.MyApp">
+        <activity android:name=".instance.GuideActivity" android:screenOrientation="portrait" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity android:name="camerplugin.zsoftware.com.videoz.SmallVideoActivity" android:screenOrientation="portrait"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            tools:replace="android:authorities">
+        </provider>
+
+        <!--instance-->
+        <activity android:name=".instance.InstanceMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.ToolbarActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.PermissionsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.UpdateAppActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.TakePhotoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.CustemVideoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.TimerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.LayoutOptimizationActivity" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

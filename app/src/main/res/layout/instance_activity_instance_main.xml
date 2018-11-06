@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <Button
+        android:id="@+id/btnToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="Toolbar/导航栏颜色/Palette取色"/>
+    <Button
+        android:id="@+id/btnPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="权限"/>
+    <Button
+        android:id="@+id/btnUpdateApp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="版本更新"/>
+    <Button
+        android:id="@+id/btnCamer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="拍照"/>
+    <Button
+        android:id="@+id/btnVideo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="自定义录像"/>
+    <Button
+        android:id="@+id/btnWebView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="WebView进度条"/>
+    <Button
+        android:id="@+id/btnTimer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAllCaps="false"
+        android:text="定时器封装"/>
+    <Button
+        android:id="@+id/btnLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="布局优化"/>
+
+</LinearLayout>

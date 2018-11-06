@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.youngtr.numberprogressbar.NumberProgressBar
+        android:id="@+id/numberProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:unreachedBarHeight="5dp"
+        app:unreachedBarColor="#FFFFFF"
+        app:reachedBarHeight="5dp"
+        app:reachedBarColor="@color/colorPrimaryDark"
+        app:numberTextVisibility="invisible" />
+
+</android.support.constraint.ConstraintLayout>
