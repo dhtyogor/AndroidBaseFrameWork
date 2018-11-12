@@ -22,4 +22,5 @@ class WelcomeActivity : BaseActivity() {
             finish()
         },3000)
     }
+
 }

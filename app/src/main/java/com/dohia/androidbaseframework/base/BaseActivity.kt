@@ -1,18 +1,22 @@
 package com.dohia.androidbaseframework.base
 
+import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.WindowManager
 import android.widget.TextView
-import com.dohia.androidbaseframework.broadcast.NetworkChangeReceiver
+import com.dohia.androidbaseframework.broadcast.NetworkStateReceiver
 import com.dohia.androidbaseframework.weight.LoadingDialog
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.cancelButton
+import org.jetbrains.anko.okButton
 
-open class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity(),NetworkStateReceiver.setBatteryText {
 
     private lateinit var mLoadingDialog: LoadingDialog
-    private lateinit var networkChangeReceiver: NetworkChangeReceiver
+    private lateinit var networkChangeReceiver: NetworkStateReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,8 +49,26 @@ open class BaseActivity : AppCompatActivity() {
     private fun netWorkCheck() {
         var intentFilter = IntentFilter()
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE")
-        networkChangeReceiver = NetworkChangeReceiver()
+        networkChangeReceiver = NetworkStateReceiver()
         registerReceiver(networkChangeReceiver,intentFilter)
+        networkChangeReceiver.getBatteryText(this)
+    }
+
+    override fun setText(isNet: Boolean) {
+        if (!isNet) {
+            setNetworkMethod()
+        }
+    }
+
+
+    private fun setNetworkMethod() {
+        alert ("网络连接不可用,是否进行设置?","网络设置提示"){
+            okButton {
+                var intent = Intent(android.provider.Settings.ACTION_SETTINGS)
+                startActivity(intent)
+            }
+            cancelButton { it.dismiss() }
+        }.show()
     }
 
     override fun onDestroy() {
