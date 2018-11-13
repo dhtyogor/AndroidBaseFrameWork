@@ -1,6 +1,5 @@
 package com.dohia.androidbaseframework.layout
 
-import android.view.View
 import com.dohia.androidbaseframework.activity.GuideActivity
 import org.jetbrains.anko.AnkoComponent
 import org.jetbrains.anko.AnkoContext

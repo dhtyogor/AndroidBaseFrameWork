@@ -28,7 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".config.MyApp">
-        <activity android:name=".instance.GuideActivity" android:screenOrientation="portrait" android:launchMode="singleTask">
+        <activity android:name=".instance.GuideActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
