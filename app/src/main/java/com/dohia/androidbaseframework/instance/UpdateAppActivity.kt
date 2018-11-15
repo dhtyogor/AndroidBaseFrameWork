@@ -9,8 +9,8 @@ import com.vector.update_app.UpdateAppManager
 
 class UpdateAppActivity : BaseActivity() {
 
-    //    var mUpdateUrl = "https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/json/json.txt"
-    var mUpdateUrl = "https://jr.huanqiu.com/api/financial/client_update_version?device_type=ANDROID"
+        var mUpdateUrl = "https://raw.githubusercontent.com/WVector/AppUpdateDemo/master/json/json.txt"
+//    var mUpdateUrl = "https://jr.huanqiu.com/api/financial/client_update_version?device_type=ANDROID"
     //http://showdoc.dev.congred.com/web/?#/67
 
     override fun onCreate(savedInstanceState: Bundle?) {

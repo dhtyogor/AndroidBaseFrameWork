@@ -13,6 +13,7 @@
              此包中包含：一些属性对象类，比如：StudentBean、LonginBean、ArticleBean等
 
     5.config
+
              此包中包含：最顶级的配置类，比如：MyApp（继承了Application）
 
     10.weight
@@ -29,6 +30,4 @@
 
     14.provider
              此包中包含：Provider内容提供者类（用得很少）
-
-    为项目的开发以及公司的发展贡献自己的力量。
 </resources>
