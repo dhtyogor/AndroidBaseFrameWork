@@ -13,12 +13,22 @@ android {
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    productFlavors {productFlavors
+        app_android_oppo{}
+        app_android_other{}
+    }
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+
     }
 }
 
@@ -44,4 +54,14 @@ dependencies {
     implementation 'com.youngtr:numberprogress:1.0.1'
     implementation project(':update-app')
     implementation project(':video')
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.sdk:common:1.5.3'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.sdk:utdid:1.1.5.3'
+    //PushSDK
+    implementation 'com.umeng.sdk:push:4.2.0'
+
+    //小米Push通道
+    implementation 'com.umeng.sdk:push-xiaomi:1.0.0'
 }

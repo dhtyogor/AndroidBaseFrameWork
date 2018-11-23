@@ -7,10 +7,14 @@
 
     <Button
         android:id="@+id/btnToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="Toolbar/导航栏颜色/Palette取色"/>
+        android:text="Toolbar/导航栏颜色/Palette取色"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="5sp"
+        android:autoSizeMinTextSize="5sp"
+        android:autoSizeMaxTextSize="100sp"/>
     <Button
         android:id="@+id/btnPermissions"
         android:layout_width="match_parent"
@@ -48,5 +52,28 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="布局优化"/>
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="布局优化布局优化布局优化布局优化布局优化布局优化布局优化布局优化布局优化布局优化布局优化ha"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="2sp"
+            android:autoSizeMaxTextSize="10sp"
+            android:autoSizeStepGranularity="1sp" />
+        <TextView
+            android:id="@+id/auto_textView"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="#2f00"
+            android:layout_gravity="center"
+            android:text="Hello Test"
+            android:autoSizeMinTextSize="40sp"
+            android:autoSizeMaxTextSize="80sp"
+            android:autoSizeStepGranularity="2sp"/>
+
+
+
 
 </LinearLayout>
