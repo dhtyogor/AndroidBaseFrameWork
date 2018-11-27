@@ -64,4 +64,7 @@ dependencies {
 
     //小米Push通道
     implementation 'com.umeng.sdk:push-xiaomi:1.0.0'
+
+
+    implementation 'com.github.ihsg:PatternLocker:2.2.0'
 }

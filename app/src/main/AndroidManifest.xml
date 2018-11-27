@@ -61,6 +61,11 @@
         <activity android:name=".activity.WebViewActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.TimerActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.LayoutOptimizationActivity" android:screenOrientation="portrait"/>
+
+        <activity android:name=".instance.pattern.PatternActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.pattern.def.DefaultStyleActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.pattern.def.DefaultPatternSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.pattern.def.DefaultPatternCheckingActivity" android:screenOrientation="portrait"/>
         <!--instance-->
 
         <meta-data
