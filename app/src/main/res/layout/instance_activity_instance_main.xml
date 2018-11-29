@@ -53,7 +53,11 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="九宫格登录"/>
-
+    <Button
+        android:id="@+id/btnContact"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="获取通讯录"/>
 
 
 
