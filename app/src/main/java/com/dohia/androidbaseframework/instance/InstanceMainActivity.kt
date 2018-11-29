@@ -26,7 +26,7 @@ class InstanceMainActivity : BaseActivity() {
         btnTimer.setOnClickListener { startActivity<TimerActivity>() }
         btnLayout.setOnClickListener { startActivity<LayoutOptimizationActivity>() }
         btnPattern.setOnClickListener { startActivity<PatternActivity>() }
-        btnContact.setOnClickListener {  }
+        btnContact.setOnClickListener { startActivity<ContactActivity>() }
     }
 
 }

@@ -19,6 +19,9 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
 
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
 
     <application
         android:allowBackup="true"
@@ -66,6 +69,7 @@
         <activity android:name=".instance.pattern.def.DefaultStyleActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.pattern.def.DefaultPatternSettingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.pattern.def.DefaultPatternCheckingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.ContactActivity" android:screenOrientation="portrait"/>
         <!--instance-->
 
         <meta-data
