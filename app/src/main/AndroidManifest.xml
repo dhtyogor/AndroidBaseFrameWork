@@ -21,6 +21,8 @@
 
     <!-- 读取联系人权限 -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!--IMEI-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 
     <application
