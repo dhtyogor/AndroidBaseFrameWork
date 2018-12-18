@@ -2,8 +2,8 @@ package com.dohia.androidbaseframework.base
 
 import android.app.Fragment
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import android.view.WindowManager
 import android.widget.TextView
 import com.dohia.androidbaseframework.weight.LoadingDialog

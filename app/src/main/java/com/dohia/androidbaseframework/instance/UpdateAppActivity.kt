@@ -1,7 +1,7 @@
 package com.dohia.androidbaseframework.instance
 
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
 import com.dohia.androidbaseframework.http.OkGoUpdateHttpUtil

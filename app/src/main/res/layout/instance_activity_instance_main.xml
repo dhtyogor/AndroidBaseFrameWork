@@ -4,63 +4,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
-
-    <Button
-        android:id="@+id/btnToolbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textAllCaps="false"
-        android:text="Toolbar/导航栏颜色/Palette取色" />
-    <Button
-        android:id="@+id/btnPermissions"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="权限"/>
-    <Button
-        android:id="@+id/btnUpdateApp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="版本更新"/>
-    <Button
-        android:id="@+id/btnCamer"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="拍照"/>
-    <Button
-        android:id="@+id/btnVideo"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="自定义录像"/>
-    <Button
-        android:id="@+id/btnWebView"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textAllCaps="false"
-        android:text="WebView进度条"/>
-    <Button
-        android:id="@+id/btnTimer"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:textAllCaps="false"
-        android:text="定时器封装"/>
-    <Button
-        android:id="@+id/btnLayout"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="布局优化"/>
-    <Button
-        android:id="@+id/btnPattern"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="九宫格登录"/>
-    <Button
-        android:id="@+id/btnContact"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="获取通讯录"/>
-
-
-
-
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btnToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="Toolbar/导航栏颜色/Palette取色" />
+            <Button
+                android:id="@+id/btnPermissions"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="权限"/>
+            <Button
+                android:id="@+id/btnUpdateApp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="版本更新"/>
+            <Button
+                android:id="@+id/btnCamer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="拍照"/>
+            <Button
+                android:id="@+id/btnVideo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="自定义录像"/>
+            <Button
+                android:id="@+id/btnWebView"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="WebView进度条"/>
+            <Button
+                android:id="@+id/btnTimer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="定时器封装 + 倒计时"/>
+            <Button
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="布局优化"/>
+            <Button
+                android:id="@+id/btnPattern"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="九宫格登录"/>
+            <Button
+                android:id="@+id/btnContact"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="获取通讯录"/>
+            <Button
+                android:id="@+id/btnMVVM"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="MVVM"/>
+            <Button
+                android:id="@+id/btnAAC"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="aac" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

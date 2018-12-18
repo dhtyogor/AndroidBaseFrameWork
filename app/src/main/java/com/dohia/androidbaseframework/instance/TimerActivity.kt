@@ -1,6 +1,7 @@
 package com.dohia.androidbaseframework.instance
 
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.os.Handler
 import android.os.Message
 import android.util.Log
@@ -16,12 +17,15 @@ author: duhaitao
  */
 class TimerActivity : BaseActivity() {
 
-    var mTimerUtils = TimerUtils()
+    private var mTimerUtils = TimerUtils()
+
+    private var runningDownTimer: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.instance_activity_timer)
         initTimer()
+        initDown()
     }
 
     private fun initTimer() {
@@ -41,6 +45,27 @@ class TimerActivity : BaseActivity() {
     override fun onDestroy() {
         super.onDestroy()
         handler.removeCallbacksAndMessages(null)
+    }
+
+    private fun initDown() {
+        btnDown.setOnClickListener {
+            if (runningDownTimer) {
+                return@setOnClickListener
+            }
+            downTimer.start()
+        }
+    }
+
+    private val downTimer = object : CountDownTimer((60 * 1000).toLong(),1000) {
+        override fun onTick(millisUntilFinished: Long) {
+            runningDownTimer = true
+            btnDown.text = (millisUntilFinished / 1000).toString() + "s"
+        }
+
+        override fun onFinish() {
+            runningDownTimer = false
+            btnDown.text = "获取验证码"
+        }
     }
 
 }

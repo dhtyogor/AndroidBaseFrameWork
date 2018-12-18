@@ -10,7 +10,6 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
 
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -45,7 +44,7 @@
 
         <activity android:name="camerplugin.zsoftware.com.videoz.SmallVideoActivity" android:screenOrientation="portrait"/>
         <provider
-            android:name="android.support.v4.content.FileProvider"
+            android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
             tools:replace="android:authorities">
         </provider>
@@ -72,6 +71,8 @@
         <activity android:name=".instance.pattern.def.DefaultPatternSettingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.pattern.def.DefaultPatternCheckingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.ContactActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.MVVMActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.aac.activity.AACActivity" android:screenOrientation="portrait"/>
         <!--instance-->
 
         <meta-data

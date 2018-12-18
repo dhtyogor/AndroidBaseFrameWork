@@ -5,7 +5,6 @@ import android.provider.ContactsContract
 import android.util.Log
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
-import com.dohia.androidbaseframework.instance.bean.Contact
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.ArrayList

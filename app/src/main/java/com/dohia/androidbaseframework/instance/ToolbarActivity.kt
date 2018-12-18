@@ -2,8 +2,8 @@ package com.dohia.androidbaseframework.instance
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.support.v4.content.ContextCompat
-import android.support.v7.graphics.Palette
+import androidx.core.content.ContextCompat
+import androidx.palette.graphics.Palette
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
 import kotlinx.android.synthetic.main.toolbar.*
@@ -19,7 +19,7 @@ class ToolbarActivity : BaseActivity() {
 
         //Palette取色
         Palette.from(BitmapFactory.decodeResource(resources,R.mipmap.ic_launcher)).generate { palette ->
-            var vibrant = palette.vibrantSwatch
+            var vibrant = palette!!.vibrantSwatch
             var rgb = vibrant!!.rgb
             window.statusBarColor = rgb
         }

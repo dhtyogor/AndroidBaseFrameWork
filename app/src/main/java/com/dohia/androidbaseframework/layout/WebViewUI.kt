@@ -28,7 +28,7 @@ class WebViewUI : AnkoComponent<WebViewActivity> {
         return ankoView({StateButton(it)},theme = 0,init = init)
     }
     override fun createView(ui: AnkoContext<WebViewActivity>) = with(ui) {
-       constraintLayout {
+       linearLayout {
            webView = webView {  }.lparams(width = matchParent,height = matchParent)
            numberProgressBar = numberProgressBar {
                visibility = View.VISIBLE
