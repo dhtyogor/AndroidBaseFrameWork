@@ -71,7 +71,6 @@
         <activity android:name=".instance.pattern.def.DefaultPatternSettingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.pattern.def.DefaultPatternCheckingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.ContactActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".instance.MVVMActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.aac.activity.AACActivity" android:screenOrientation="portrait"/>
         <!--instance-->
 

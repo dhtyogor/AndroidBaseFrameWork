@@ -31,7 +31,6 @@ class InstanceMainActivity : BaseActivity() {
         btnLayout.setOnClickListener { startActivity<LayoutOptimizationActivity>() }
         btnPattern.setOnClickListener { startActivity<PatternActivity>() }
         btnContact.setOnClickListener { startActivity<ContactActivity>() }
-        btnMVVM.setOnClickListener { startActivity<MVVMActivity>() }
         btnAAC.setOnClickListener { startActivity<AACActivity>() }
     }
 

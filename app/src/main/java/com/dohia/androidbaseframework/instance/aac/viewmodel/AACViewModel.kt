@@ -3,17 +3,17 @@ package com.dohia.androidbaseframework.instance.aac.viewmodel
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import com.dohia.androidbaseframework.instance.aac.model.NewsResult
-import com.dohia.androidbaseframework.instance.aac.repository.NewsRepository
+import com.dohia.androidbaseframework.instance.aac.repository.Repository
 
 /**
 Date: 2018/12/6
 Time: 11:06
 author: duhaitao
  */
-class AACViewModel(newsRepository: NewsRepository) : ViewModel() {
+class AACViewModel(newsRepository: Repository) : ViewModel() {
 
-    val news = MediatorLiveData<NewsResult>()
+    val data = MediatorLiveData<NewsResult>()
     init {
-        news.addSource(newsRepository.getLastNews(),news::setValue)
+        data.addSource(newsRepository.getLastNews(),data::setValue)
     }
 }

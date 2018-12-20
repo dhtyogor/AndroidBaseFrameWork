@@ -3,7 +3,7 @@ package camerplugin.zsoftware.com.videoz.entry;
 import android.app.Activity;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.content.FileProvider;
+import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.io.Serializable;
