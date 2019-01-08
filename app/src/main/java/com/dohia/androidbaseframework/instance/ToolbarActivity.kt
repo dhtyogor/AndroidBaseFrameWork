@@ -18,7 +18,7 @@ class ToolbarActivity : BaseActivity() {
         initToolBar(toolbar,tvTitle,"Toolbar标题",R.drawable.ic_chevron_left_black_24dp)
 
         //Palette取色
-        Palette.from(BitmapFactory.decodeResource(resources,R.mipmap.ic_launcher)).generate { palette ->
+        Palette.from(BitmapFactory.decodeResource(resources,R.mipmap.start_page_x_icon)).generate { palette ->
             var vibrant = palette!!.vibrantSwatch
             var rgb = vibrant!!.rgb
             window.statusBarColor = rgb

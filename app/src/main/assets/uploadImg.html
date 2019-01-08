@@ -1,57 +1,18 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <title>H5页面上传手机照片</title>
-  <script>
-   function callAndroid(){
-      JSToAndroid.showInfoFromJs(5,12333,1)
-   }
-   function callAndroids(){
-      JSToAndroid.showInfoFromJs(1,12222,1)
-   }
+<!DOCTYPE html>
+<html manifest="%PUBLIC_URL%/m.manifest" lang="zh-CN">
+<head>
+ <meta charset="utf-8">
+ <title>要用钱</title>
+ <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+ <style>
+ </style>
+</head>
+<body>
 
-    function start(){
-      JSToAndroid.showInfoFromJs(7,"777",3)
-   }
 
-    function pause(){
-      JSToAndroid.showInfoFromJs(7,333,3)
-   }
-    function resume(){
-      JSToAndroid.showInfoFromJs(1,333,3)
-   }
-    function stop(){
-      JSToAndroid.showInfoFromJs(13)
-   }
+  拍照：<p>Capture Image: <input type="file" accept="image/*"  capture="camera"> 
 
-   function showInfoFromJava(latitude,longitude,uid) {
-      alert("来自客户端的信息:"+latitude+longitude+uid)
-      document.getElementById("img").src=""+path
-   }
-  </script>
- </head>
- <body>
- <form action="">
-  <p>图片1: <input type="file" name="uploadImg1" /></p>
-  <p>图片2: <input type="file" name="uploadImg2" /></p>
-  <input type="submit" value="Submit" />
-  <input type="file" capture="camera">
-</form>
+  摄像：<p>Capture Video: <input type="file" accept="video/*"  capture="camcorder">     
 
- <button type="button" id="button1" onclick="callAndroid()" style="width:420px;height:30px"></button>
- <button type="button" id="button2" onclick="callAndroids()" style="width:420px;height:30px"></button>
-
- <button type="button" id="button10" onclick="start()" style="width:420px;height:30px"></button>
- <button type="button" id="button11" onclick="pause()" style="width:420px;height:30px"></button>
- <!--<button type="button" id="button12" onclick="resume()" style="width:420px;height:30px"></button>-->
- <!--<button type="button" id="button13" onclick="stop()" style="width:420px;height:30px"></button>-->
-
- <img id= "img" src="file:///android_asset/a.jpg"  width="100" height="100"/>
-
- </body>
+</body>
 </html>

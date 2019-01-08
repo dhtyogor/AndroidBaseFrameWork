@@ -27,6 +27,8 @@ class InstanceMainActivity : BaseActivity() {
         btnCamer.setOnClickListener { startActivity<TakePhotoActivity>() }
         btnVideo.setOnClickListener { startActivity<CustemVideoActivity>() }
         btnWebView.setOnClickListener { startActivity<WebViewActivity>() }
+        btnWebViewH5.setOnClickListener { startActivity<WebViewH5Activity>() }
+        btnScreenOf.setOnClickListener { startActivity<ScreenOfActivity>() }
         btnTimer.setOnClickListener { startActivity<TimerActivity>() }
         btnLayout.setOnClickListener { startActivity<LayoutOptimizationActivity>() }
         btnPattern.setOnClickListener { startActivity<PatternActivity>() }

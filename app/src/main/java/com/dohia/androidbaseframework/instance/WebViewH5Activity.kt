@@ -1,39 +1,36 @@
-package com.dohia.androidbaseframework.activity
+package com.dohia.androidbaseframework.instance
 
 import android.content.Intent
 import android.net.Uri
 import android.net.http.SslError
 import android.os.Bundle
-import android.provider.MediaStore
 import android.util.Log
-import android.view.View
 import android.webkit.*
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
+import com.dohia.androidbaseframework.instance.utils.PhotoUtil
 import kotlinx.android.synthetic.main.activity_webview.*
 import org.jetbrains.anko.act
+import java.io.File
 
 /**
-Date: 2018/10/19
-Time: 14:00
+Date: 2019/1/3
+Time: 15:29
 author: duhaitao
  */
-class WebViewActivity : BaseActivity(){
+class WebViewH5Activity : BaseActivity() {
 
     private val url = "file:///android_asset/uploadImg.html"
+//    private val url = "https://test.yaoyongqian.com/h5/site"
+    private lateinit var mPhotoUtil: PhotoUtil
     var mFilePathCallback: ValueCallback<Array<Uri>>? = null
 
-    //https://test.yaoyongqian.com/h5/site
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
-
-    }
-
-    override fun onResume() {
-        super.onResume()
         initWebView()
         webView.loadUrl(url)
+        mPhotoUtil = PhotoUtil(this,this@WebViewH5Activity)
     }
 
     private fun initWebView() {
@@ -62,59 +59,28 @@ class WebViewActivity : BaseActivity(){
 
 
         webView.addJavascriptInterface(act,"JSToAndroid")
-
-        ///
-        webSettings.allowContentAccess = true  // 是否可访问Content Provider的资源，默认值 true
-        webSettings.allowFileAccess = true
-        webSettings.useWideViewPort = true
-        webSettings.loadWithOverviewMode = true
-        webSettings.domStorageEnabled = true
-
-        webSettings.setDefaultTextEncodingName("UTF-8")
-
-        // 是否允许通过file url加载的Javascript读取本地文件，默认值 false
-        webSettings.setAllowFileAccessFromFileURLs(false)
-        // 是否允许通过file url加载的Javascript读取全部资源(包括文件,http,https)，默认值 false
-        webSettings.setAllowUniversalAccessFromFileURLs(false)
-        //开启JavaScript支持
-        webSettings.setJavaScriptEnabled(true)
-
     }
 
     private var webChromeClient: WebChromeClient = object : WebChromeClient() {
-
-        override fun onProgressChanged(view: WebView?, newProgress: Int) {
-            super.onProgressChanged(view, newProgress)
-            if (newProgress == 100) {
-                numberProgress.visibility = View.GONE
-            } else {
-                numberProgress.visibility = View.VISIBLE
-                numberProgress.progress = newProgress
-            }
-        }
-
         override fun onShowFileChooser(webView: WebView?, filePathCallback: ValueCallback<Array<Uri>>?, fileChooserParams: FileChooserParams?): Boolean {
             super.onShowFileChooser(webView, filePathCallback, fileChooserParams)
             mFilePathCallback = filePathCallback
             var accept = fileChooserParams?.acceptTypes
             for(i in accept!!){
                 if (i == "image/*") {
-                    openCarcme() //调用系统相机拍照
+                    mPhotoUtil.getTakePhoto()
                 }
                 if (i == "video/*") {
-                    openVideo()//调用系统相机录像
+                    mPhotoUtil.getVideo()
                 }
             }
-
             return true
         }
-
     }
 
     private var webViewClient: WebViewClient = object : WebViewClient() {
-
         override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
-            return true
+            return super.shouldOverrideUrlLoading(view, request)
         }
         override fun onReceivedSslError(view: WebView?, handler: SslErrorHandler?, error: SslError?) {
             super.onReceivedSslError(view, handler, error)
@@ -122,19 +88,23 @@ class WebViewActivity : BaseActivity(){
         }
     }
 
-    @JavascriptInterface
-    fun showInfoFromJs() {}
 
-
-    private fun openCarcme() {
-        var intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        startActivityForResult(intent, 1)
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(requestCode){
+            PhotoUtil.REQUEST_CODE_TAKE_PHOTO -> {
+                finishActivity(PhotoUtil.REQUEST_CODE_TAKE_PHOTO)
+                var path = PhotoUtil?.photoPath
+                var uri = Uri.fromFile(File(path))
+                mFilePathCallback?.onReceiveValue(arrayOf(uri))
+            }
+            PhotoUtil.REQUEST_CODE_TAKE_VIDEO -> {
+                finishActivity(PhotoUtil.REQUEST_CODE_TAKE_VIDEO)
+                var path = PhotoUtil?.photoPath
+                var uri = Uri.fromFile(File(path))
+                mFilePathCallback?.onReceiveValue(arrayOf(uri))
+            }
+        }
     }
-
-    private fun openVideo() {
-        var intent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
-        startActivityForResult(intent, 1)
-    }
-
 
 }

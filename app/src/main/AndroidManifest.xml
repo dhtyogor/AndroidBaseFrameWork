@@ -63,6 +63,8 @@
         <activity android:name=".instance.TakePhotoActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.CustemVideoActivity" android:screenOrientation="portrait"/>
         <activity android:name=".activity.WebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.WebViewH5Activity" android:screenOrientation="portrait"/>
+        <activity android:name=".instance.ScreenOfActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.TimerActivity" android:screenOrientation="portrait"/>
         <activity android:name=".instance.LayoutOptimizationActivity" android:screenOrientation="portrait"/>
 
@@ -90,6 +92,7 @@
             android:launchMode="singleTask"
             android:exported="true"
             android:screenOrientation="portrait"/>
+        <!--<meta-data android:name="android.max_aspect" android:value="2.1" />-->
     </application>
 
 </manifest>

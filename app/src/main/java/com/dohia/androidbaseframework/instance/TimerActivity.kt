@@ -7,7 +7,7 @@ import android.os.Message
 import android.util.Log
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
-import com.dohia.androidbaseframework.utils.TimerUtils
+import com.dohia.androidbaseframework.utils.TimerUtil
 import kotlinx.android.synthetic.main.instance_activity_timer.*
 
 /**
@@ -17,7 +17,7 @@ author: duhaitao
  */
 class TimerActivity : BaseActivity() {
 
-    private var mTimerUtils = TimerUtils()
+    private var mTimerUtils = TimerUtil()
 
     private var runningDownTimer: Boolean = false
 

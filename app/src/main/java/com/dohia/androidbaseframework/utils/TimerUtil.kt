@@ -9,7 +9,7 @@ Date: 2018/10/31
 Time: 14:59
 author: duhaitao
  */
-class TimerUtils {
+class TimerUtil {
 
     private var timer: Timer? = null
     private var timerTask: TimerTask? = null

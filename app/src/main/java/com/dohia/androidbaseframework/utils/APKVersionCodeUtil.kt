@@ -8,7 +8,7 @@ Date: 2018/10/18
 Time: 10:47
 author: duhaitao
  */
-class APKVersionCodeUtils {
+class APKVersionCodeUtil {
 
     companion object {
         /**

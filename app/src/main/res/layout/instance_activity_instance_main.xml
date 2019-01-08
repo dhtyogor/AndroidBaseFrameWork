@@ -44,6 +44,18 @@
                 android:textAllCaps="false"
                 android:text="WebView进度条"/>
             <Button
+                android:id="@+id/btnWebViewH5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="webview-h5拍照录像"/>
+            <Button
+                android:id="@+id/btnScreenOf"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="屏占比 全面屏/刘海屏"/>
+            <Button
                 android:id="@+id/btnTimer"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
