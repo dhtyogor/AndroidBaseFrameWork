@@ -1,6 +1,7 @@
 package com.dohia.androidbaseframework.api
 
 import com.dohia.androidbaseframework.model.Banner
+import com.dohia.androidbaseframework.model.UpdataApp
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -15,8 +16,11 @@ interface API {
     @GET("")
     fun banner(): Call<Banner>
 
+    @GET("client_update_version?device_type=ANDROID")
+    fun updateApp(): Call<UpdataApp>
+
     companion object {
-        private var BASEURL = ""
+        private var BASEURL = "https://jr.huanqiu.com/api/financial/"
         fun create(): API {
             return Retrofit.Builder()
                     .baseUrl(BASEURL)

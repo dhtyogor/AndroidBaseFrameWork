@@ -13,7 +13,7 @@ class PermissionsActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
         setPermissions()
     }
-
+    //<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     private fun setPermissions() {
         Acp.getInstance(this).request(AcpOptions.Builder().setPermissions(
                 Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -21,6 +21,7 @@ class PermissionsActivity : BaseActivity() {
                 Manifest.permission.CAMERA,
                 Manifest.permission.RECORD_AUDIO,
                 Manifest.permission.WAKE_LOCK
+//                Manifest.permission.REQUEST_INSTALL_PACKAGES
         ).build(),null)
     }
 }

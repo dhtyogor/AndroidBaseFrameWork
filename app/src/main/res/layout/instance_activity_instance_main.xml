@@ -12,11 +12,22 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
             <Button
+                android:id="@+id/btnAutoSize"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="自动适配分辨率框架"/>
+            <Button
                 android:id="@+id/btnToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:textAllCaps="false"
                 android:text="Toolbar/导航栏颜色/Palette取色" />
+            <Button
+                android:id="@+id/btnStatusBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="状态栏颜色/字体颜色"/>
             <Button
                 android:id="@+id/btnPermissions"
                 android:layout_width="match_parent"
@@ -49,6 +60,12 @@
                 android:layout_height="40dp"
                 android:textAllCaps="false"
                 android:text="webview-h5拍照录像"/>
+            <Button
+                android:id="@+id/btnWebViewH5Take"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:text="webview-h5拍照上传显示"/>
             <Button
                 android:id="@+id/btnScreenOf"
                 android:layout_width="match_parent"

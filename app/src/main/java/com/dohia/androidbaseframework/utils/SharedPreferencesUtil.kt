@@ -16,7 +16,22 @@ class SharedPreferencesUtil {
     }
 
     fun getString(key: String): String {
-
         return MyApp.instance.getSharedPreferences(MyApp.instance.packageName,0).getString(key,"")
+    }
+    /**
+     *清除指定数据
+     * */
+    fun remove(key: String) {
+        val edit = MyApp.instance.getSharedPreferences(MyApp.instance.packageName,0).edit()
+        edit.remove(key)
+        edit.commit()
+    }
+    /**
+     * 清空数据
+     * */
+    fun clear(key: String) {
+        val edit = MyApp.instance.getSharedPreferences(MyApp.instance.packageName,0).edit()
+        edit.clear()
+        edit.commit()
     }
 }

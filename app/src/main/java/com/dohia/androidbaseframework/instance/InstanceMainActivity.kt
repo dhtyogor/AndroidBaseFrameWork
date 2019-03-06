@@ -21,13 +21,16 @@ class InstanceMainActivity : BaseActivity() {
     }
 
     private fun initView() {
+        btnAutoSize.setOnClickListener { startActivity<AutoSizeActivity>() }
         btnToolbar.setOnClickListener { startActivity<ToolbarActivity>() }
+        btnStatusBar.setOnClickListener { startActivity<StatusBarActivity>() }
         btnPermissions.setOnClickListener { startActivity<PermissionsActivity>() }
         btnUpdateApp.setOnClickListener { startActivity<UpdateAppActivity>() }
         btnCamer.setOnClickListener { startActivity<TakePhotoActivity>() }
         btnVideo.setOnClickListener { startActivity<CustemVideoActivity>() }
         btnWebView.setOnClickListener { startActivity<WebViewActivity>() }
         btnWebViewH5.setOnClickListener { startActivity<WebViewH5Activity>() }
+        btnWebViewH5Take.setOnClickListener { startActivity<WebViewH5TakeActivity>() }
         btnScreenOf.setOnClickListener { startActivity<ScreenOfActivity>() }
         btnTimer.setOnClickListener { startActivity<TimerActivity>() }
         btnLayout.setOnClickListener { startActivity<LayoutOptimizationActivity>() }

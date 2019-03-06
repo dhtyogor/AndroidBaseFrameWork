@@ -33,7 +33,7 @@ class PhotoUtil(context: Context, activity: AppCompatActivity) {
         photoPath = photFile.absolutePath
 
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        intent.putExtra("android.intent.extras.CAMERA_FACING", 0)
+        intent.putExtra("android.intent.extras.CAMERA_FACING", 0)//前置摄像头
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             var authority = context.packageName + ".fileProvider"
             var contentUri = FileProvider.getUriForFile(context,authority,photFile)

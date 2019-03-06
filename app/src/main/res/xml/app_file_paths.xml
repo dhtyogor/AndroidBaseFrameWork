@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<root-path name="root" path="" />&lt;!&ndash;代表设备的根目录new File("/")&ndash;&gt;-->
+    <!--<files-path name="files" path="/" />&lt;!&ndash;代表context.getFilesDir()&ndash;&gt;-->
+    <!--<cache-path name="cache" path="/" />&lt;!&ndash;代表context.getCacheDir()&ndash;&gt;-->
+    <!--<external-path name="external" path="/" />&lt;!&ndash;代表Environment.getExternalStorageDirectory()&ndash;&gt;-->
+    <!--<external-files-path name="name" path="/" />&lt;!&ndash;代表context.getExternalFilesDirs()&ndash;&gt;-->
+    <!--<external-cache-path name="name" path="path" />&lt;!&ndash;代表getExternalCacheDirs()&ndash;&gt;-->
+
+
+
+  <paths>
+    <root-path path="" name="camera_photos" />
+  </paths>
+
+</resources>

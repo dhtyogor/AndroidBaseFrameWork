@@ -2,6 +2,7 @@ package com.dohia.androidbaseframework.instance
 
 import android.os.Bundle
 import android.util.Log
+import android.view.DisplayCutout
 import com.bumptech.glide.Glide
 import com.dohia.androidbaseframework.R
 import com.dohia.androidbaseframework.base.BaseActivity
@@ -23,6 +24,7 @@ class ScreenOfActivity : BaseActivity() {
         setContentView(R.layout.instance_activity_screen_of)
         ImmersionBar.with(this).transparentBar().init()
         var isScreen = ISScreenXUtil.isAllScreenDevice(this)
+        Log.e("xxx",">>"+isScreen)
         if (isScreen) Glide.with(this@ScreenOfActivity).load(R.mipmap.start_page_x_icon).into(ivScreen)
         else Glide.with(this@ScreenOfActivity).load(R.mipmap.start_page_icon).into(ivScreen)
     }
